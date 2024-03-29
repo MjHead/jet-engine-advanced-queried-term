@@ -61,7 +61,7 @@ add_action( 'jet-engine/register-macros', function() {
 				&& $tax_slug
 			) {
 				if ( empty( $_REQUEST['query'][ '_tax_query_' . $tax_slug ] ) ) {
-					return null;
+					return '';
 				} else {
 					return $_REQUEST['query'][ '_tax_query_' . $tax_slug ];
 				}
@@ -92,5 +92,5 @@ add_action( 'jet-engine/register-macros', function() {
 	}
 	
 	// Include file with macros class. In current example class itself added below
-	new My_Macros();
+	new JE_Advanced_Quried_Term_Marcos();
 } );
